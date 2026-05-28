@@ -149,13 +149,14 @@ module "db_instance" {
   nchar_character_set_name = var.nchar_character_set_name
   timezone                 = var.timezone
 
-  enabled_cloudwatch_logs_exports        = var.enabled_cloudwatch_logs_exports
-  create_cloudwatch_log_group            = var.create_cloudwatch_log_group
-  cloudwatch_log_group_retention_in_days = var.cloudwatch_log_group_retention_in_days
-  cloudwatch_log_group_kms_key_id        = var.cloudwatch_log_group_kms_key_id
-  cloudwatch_log_group_skip_destroy      = var.cloudwatch_log_group_skip_destroy
-  cloudwatch_log_group_class             = var.cloudwatch_log_group_class
-  cloudwatch_log_group_tags              = var.cloudwatch_log_group_tags
+  enabled_cloudwatch_logs_exports                  = var.enabled_cloudwatch_logs_exports
+  create_cloudwatch_log_group                      = var.create_cloudwatch_log_group
+  cloudwatch_log_group_retention_in_days           = var.cloudwatch_log_group_retention_in_days
+  cloudwatch_log_group_kms_key_id                  = var.cloudwatch_log_group_kms_key_id
+  cloudwatch_log_group_skip_destroy                = var.cloudwatch_log_group_skip_destroy
+  cloudwatch_log_group_class                       = var.cloudwatch_log_group_class
+  cloudwatch_log_group_deletion_protection_enabled = var.cloudwatch_log_group_deletion_protection_enabled
+  cloudwatch_log_group_tags                        = var.cloudwatch_log_group_tags
 
   timeouts = var.timeouts
 
