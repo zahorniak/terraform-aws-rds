@@ -67,6 +67,11 @@ module "db" {
   enabled_cloudwatch_logs_exports = ["postgresql", "upgrade"]
   create_cloudwatch_log_group     = true
 
+  # `terraform destroy` will fail while this is `true`. To tear the example
+  # down, first set this to `false` and re-apply (removing the argument is
+  # not sufficient — the AWS provider requires an explicit `false`).
+  cloudwatch_log_group_deletion_protection_enabled = true
+
   backup_retention_period = 1
   skip_final_snapshot     = true
   deletion_protection     = false
